@@ -1,31 +1,13 @@
 package org.example.entities;
 
-public class State {
-    String code;
-    String name;
+public class State extends IEntity{
     Country country;
 
-        public String getCode() {
-                return code;
-        }
+    public Country getCountry() {
+        return country;
+    }
 
-        public void setCode(String code) {
-                this.code = code;
-        }
-
-        public String getName() {
-                return name;
-        }
-
-        public void setName(String name) {
-                this.name = name;
-        }
-
-        public Country getCountry() {
-                return country;
-        }
-
-        public void setCountry(Country country) {
-                this.country = country;
-        }
+    public void setCountry(Country country) {
+        this.country = country;
+    }
 }

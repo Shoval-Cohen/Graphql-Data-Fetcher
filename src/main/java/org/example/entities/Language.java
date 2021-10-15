@@ -1,26 +1,8 @@
 package org.example.entities;
 
-public class Language {
-    String code;
-    String name;
+public class Language extends IEntity {
     String nativeLang;
     boolean rtl;
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getNative() {
         return nativeLang;

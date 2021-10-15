@@ -2,9 +2,7 @@ package org.example.entities;
 
 import java.util.List;
 
-public class Country {
-    String code;
-    String name;
+public class Country extends IEntity{
     String nativeLang;
     String phone;
     Continent continent;
@@ -14,22 +12,6 @@ public class Country {
     String emoji;
     String emojiU;
     List<State> states;
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getNative() {
         return nativeLang;
