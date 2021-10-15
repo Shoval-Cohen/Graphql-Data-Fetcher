@@ -11,6 +11,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Hello world!
@@ -74,6 +75,11 @@ public class Fetcher {
         List<Continent> continents = objectMapper.readValue(responseDataAsString, new TypeReference<List<Continent>>() {
         });
 
-        continents.forEach(System.out::println);
+        System.out.println("Try to write to DB");
+        RedisAPI.writeToDbAsRMap(continents);
+        System.out.println("Written!");
+
+        Map conts = RedisAPI.getAllEntitiesOfType(Continent.class.getName());
+        conts.forEach((k, v) -> System.out.println("k = " + k + ", v = " + v));
     }
 }
